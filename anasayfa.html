@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agena Danışmanlık | Franchise & Marka Danışmanlığı</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Figtree', sans-serif; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+            background-color: #fff;
+            color: #1a1a1a;
+        }
+        html { 
+            scroll-behavior: smooth; 
+        }
+        .animated-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .animated-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="page-header" class="fixed top-0 z-50 w-full transition-all duration-300 bg-transparent">
+        <nav class="container mx-auto px-6 lg:px-8 py-4 grid grid-cols-3 items-center max-w-7xl">
+            <div class="flex justify-start">
+                <a href="index.html" aria-label="Ana Sayfa">
+                    <img src="https://i.ibb.co/6g9g7dD/AGENA-LOGO-YEN.png" alt="Agena Danışmanlık Logosu" class="h-8 w-auto">
+                </a>
+            </div>
+            <div class="hidden md:flex justify-center items-center space-x-8">
+                <a href="#hizmetler" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Hizmetler</a>
+                <a href="#surec" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Süreç</a>
+                <a href="#referanslar" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Referanslar</a>
+                <a href="#blog" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Blog</a>
+            </div>
+            <div class="flex justify-end items-center">
+                <div class="hidden md:flex">
+                   <a href="#contact" class="text-sm font-medium text-white bg-transparent border border-gray-500 rounded-full px-5 py-2 hover:bg-white hover:text-black transition-all duration-300">Ön Görüşme</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-button" aria-label="Menüyü aç/kapat" class="text-white z-50 relative">
+                        <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                        <svg id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 hidden"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-black/90 backdrop-blur-lg transition-opacity duration-300">
+        <div class="flex flex-col items-center justify-center h-full pt-16">
+            <a href="#hizmetler" class="mobile-menu-link py-4 text-2xl font-medium text-gray-200 hover:text-white transition-colors">Hizmetler</a>
+            <a href="#surec" class="mobile-menu-link py-4 text-2xl font-medium text-gray-200 hover:text-white transition-colors">Süreç</a>
+            <a href="#referanslar" class="mobile-menu-link py-4 text-2xl font-medium text-gray-200 hover:text-white transition-colors">Referanslar</a>
+            <a href="#blog" class="mobile-menu-link py-4 text-2xl font-medium text-gray-200 hover:text-white transition-colors">Blog</a>
+            <a href="#contact" class="mobile-menu-link mt-8 text-lg font-medium text-black bg-white rounded-full px-8 py-3 hover:bg-gray-200 transition-all duration-300">Ön Görüşme</a>
+        </div>
+    </div>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen min-h-[700px] w-full flex items-center justify-center text-white bg-black">
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://framerusercontent.com/images/7MARqQztqNevdDLwevn1REQ1Suk.jpg')"></div>
+            <div class="relative z-20 text-center container mx-auto px-6 max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-medium mb-6" style="font-family: 'Figtree', sans-serif; text-wrap: balance;">
+                    Franchise & Marka Danışmanlığında Stratejik Ortağınız
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+                    25 yılı aşkın tecrübeyle, sıfırdan marka yaratma, franchise sistemi kurma, menü ve mimari konsept geliştirme süreçlerinizde markanızı zirveye taşıyoruz.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="group relative inline-block text-base font-medium text-white bg-[#5a7872] px-8 py-3 rounded-full transition-all duration-300 hover:bg-[#4a6862]">
+                        Ön Görüşme
+                    </a>
+                    <a href="https://wa.me/905065149897" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center text-base font-medium text-white bg-transparent border border-gray-500 rounded-full px-8 py-3 transition-all duration-300 hover:bg-white hover:text-black">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 mr-2"><path d="M16.75 13.96c.25.25.25.66 0 .91l-1.54 1.54c-.12.12-.29.19-.46.19-.17 0-.34-.07-.46-.19-.1-.1-.15-.22-.17-.35-.02-.13-.03-.26-.03-.39 0-.28.11-.55.31-.75l1.54-1.54c.25-.25.66-.25.91 0z m-3.2-3.21c-.25-.25-.66-.25-.91 0l-1.54 1.54c-.2.2-.31.47-.31.75s.11.55.31.75l1.54 1.54c.25.25.66.25.91 0s.25-.66 0-.91l-1.08-1.08 1.08-1.08c.25-.25.25-.66 0-.91z m-1.61 5.84c-.13 0-.26-.05-.35-.15l-1.04-1.04-1.04 1.04c-.1.1-.22.15-.35.15s-.26-.05-.35-.15c-.2-.2-.2-.51 0-.71l1.39-1.39-1.39-1.39c-.2-.2-.2-.51 0-.71s.51-.2.71 0l1.04 1.04 1.04-1.04c.2-.2.51-.2.71 0s.2.51 0 .71L12.3 15l1.39 1.39c.2.2.2.51 0 .71-.1.1-.23.15-.36.15zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg> 
+                        WhatsApp'tan Yazın
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="hizmetler" class="animated-section bg-white py-20 lg:py-32">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <p class="text-[#5a7872] font-medium mb-2">Hizmetlerimiz</p>
+                        <h2 class="text-4xl md:text-5xl font-medium text-black" style="font-family: 'Figtree', sans-serif;">Neler Yapıyoruz?</h2>
+                    </div>
+                    <p class="text-gray-600 text-lg">
+                        Markanızın büyüme yolundaki doğru yapı taşlarını oluşturmak ve kurumsallaşma faaliyetlerini sürdürmek için profesyonel ekibimizle tüm süreçleri 360 derece yönetiyoruz.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="relative rounded-xl overflow-hidden group h-[350px] transition-transform duration-300 hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop" alt="Franchise ve Satış Danışmanlığı" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
+                            <h3 class="text-white text-2xl font-medium mb-2">Franchise ve Satış Danışmanlığı</h3>
+                            <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Markanız için doğru franchise modelini oluşturur, satış süreçlerinizi yönetir ve büyüme stratejinizi kurgularız.</p>
+                        </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden group h-[350px] transition-transform duration-300 hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2787&auto=format&fit=crop" alt="Menü Desteği ve Planlama" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
+                            <h3 class="text-white text-2xl font-medium mb-2">Menü Desteği ve Planlama</h3>
+                            <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Hedef kitlenize ve konseptinize uygun, kârlılığı yüksek, yenilikçi ve sürdürülebilir menüler hazırlıyoruz.</p>
+                        </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden group h-[350px] transition-transform duration-300 hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=2787&auto=format&fit=crop" alt="Mimari ve Konsept Tasarım" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
+                            <h3 class="text-white text-2xl font-medium mb-2">Mimari ve Konsept Tasarım</h3>
+                            <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Mekanınızın kimliğini yansıtan, operasyonel verimliliği artıran ve müşteri deneyimini zirveye taşıyan tasarımlar sunuyoruz.</p>
+                        </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden group h-[350px] transition-transform duration-300 hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2938&auto=format&fit=crop" alt="Yatırımcı & Franchise Eşleştirme" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
+                            <h3 class="text-white text-2xl font-medium mb-2">Yatırımcı & Franchise Eşleştirme</h3>
+                            <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Büyümek isteyen markalarla, doğru yatırım fırsatı arayan girişimcileri profesyonel bir zeminde buluşturuyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Choose Us Section -->
+        <section class="animated-section bg-white py-20 lg:py-32">
+            <div class="container mx-auto px-6 max-w-7xl text-center">
+                <p class="text-[#5a7872] font-medium mb-4">Neden Agena?</p>
+                <h2 class="text-4xl md:text-5xl font-medium text-black mb-6" style="font-family: 'Figtree', sans-serif; text-wrap: balance;">
+                    Yatırımınızı Stratejik Avantaja Dönüştürüyoruz
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto mb-16">
+                    Öncelikli amacımız, yeni ve mevcut şirketlerin marka değerini artırmak, büyüme yolundaki doğru yapı taşlarını oluşturmak ve kurumsallaşma faaliyetlerini sürdürmektir. Rakiplerinize karşı fark yaratmanızı sağlıyoruz.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+                    <div>
+                        <div class="inline-block p-4 bg-green-100/50 rounded-lg mb-4">
+                            <div class="text-[#5a7872] w-7 h-7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
+                        </div>
+                        <h3 class="text-xl font-medium text-black mb-2">25+ Yıllık Sektör Tecrübesi</h3>
+                        <p class="text-gray-600 mb-4">Yiyecek-içecek ve perakende sektörlerindeki çeyrek asırlık deneyimimizle projenize değer katıyoruz.</p>
+                    </div>
+                    <div>
+                        <div class="inline-block p-4 bg-green-100/50 rounded-lg mb-4">
+                            <div class="text-[#5a7872] w-7 h-7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                        </div>
+                        <h3 class="text-xl font-medium text-black mb-2">Profesyonel ve Bütünsel Ekip</h3>
+                        <p class="text-gray-600 mb-4">Alanında uzman marka, operasyon ve mimari danışmanlarımızla yanınızdayız.</p>
+                    </div>
+                    <div>
+                        <div class="inline-block p-4 bg-green-100/50 rounded-lg mb-4">
+                            <div class="text-[#5a7872] w-7 h-7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1M9 19h6a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H9v7Z"></path><path d="M12 19V5a2 2 0 0 0-2-2H7"></path></svg></div>
+                        </div>
+                        <h3 class="text-xl font-medium text-black mb-2">Sürdürülebilir Büyüme Odaklı</h3>
+                        <p class="text-gray-600 mb-4">Marka oluşturmadan denetime, kârlılığınızı ve standartlarınızı koruyacak sistemler kuruyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process Section -->
+        <section id="surec" class="animated-section bg-[#5a7872] text-white py-20 lg:py-32">
+            <div class="container mx-auto px-6 max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-medium mb-6" style="font-family: 'Figtree', sans-serif;">Kanıtlanmış Süreçlerimiz</h2>
+                    <p class="text-lg text-gray-200 mb-8">
+                        Markanızı kolay yönetilebilir bir hale getirmek ve maksimum faydayı sağlamak için yapılandırılmış, şeffaf ve sonuç odaklı adımlarla ilerliyoruz.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                        <h3 class="text-4xl font-medium text-gray-300 mb-4">01.</h3>
+                        <h4 class="text-xl font-medium text-white mb-2">Keşif & Analiz</h4>
+                        <p class="text-gray-200">Markanızın işleyişini, doğru ve eksik yönlerini analiz ederek yol haritası çiziyoruz.</p>
+                    </div>
+                    <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                        <h3 class="text-4xl font-medium text-gray-300 mb-4">02.</h3>
+                        <h4 class="text-xl font-medium text-white mb-2">Strateji Geliştirme</h4>
+                        <p class="text-gray-200">İyileştirme alanlarına yönelik uygun araç ve teknikleri seçerek operasyon sistemini kuruyoruz.</p>
+                    </div>
+                    <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                        <h3 class="text-4xl font-medium text-gray-300 mb-4">03.</h3>
+                        <h4 class="text-xl font-medium text-white mb-2">Uygulama & Eğitim</h4>
+                        <p class="text-gray-200">Gerekli form ve raporlama araçlarını oluşturarak ekibinize eğitimler veriyoruz.</p>
+                    </div>
+                    <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                        <h3 class="text-4xl font-medium text-gray-300 mb-4">04.</h3>
+                        <h4 class="text-xl font-medium text-white mb-2">Denetim & Raporlama</h4>
+                        <p class="text-gray-200">Gizli müşteri ve periyodik denetimlerle standardizasyonun korunmasını sağlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="referanslar" class="animated-section bg-white py-20 lg:py-32">
+            <div class="container mx-auto px-6 max-w-7xl text-center">
+                 <p class="text-[#5a7872] font-medium mb-4">Referanslarımız</p>
+                <h2 class="text-4xl md:text-5xl font-medium text-black mb-16" style="font-family: 'Figtree', sans-serif; text-wrap: balance;">
+                    Birlikte Büyüttüğümüz Markalar
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-12 items-center">
+                    <img src="https://ibb.co/93z062Z9" alt="Kahve Durağı" title="Kahve Durağı" class="mx-auto h-14 object-contain opacity-90 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/pBvJNNNH" alt="Happy Italy" title="Happy Italy" class="mx-auto h-14 object-contain opacity-90 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/qM6CLLVC" alt="Barbeen" title="Barbeen" class="mx-auto h-14 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/gMhdFs5X" alt="Yüzde Yüz" title="Yüzde Yüz" class="mx-auto h-14 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/21qp0JVx" alt="Munchies" title="Munchies" class="mx-auto h-14 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/qYF1LQ31" alt="Kos Pasta" title="Kos Pasta" class="mx-auto h-14 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/9m7Sg6N9" alt="Nelly Coffee" title="Nelly Coffee" class="mx-auto h-14 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/BHLv2BS6" alt="Retrosfer" title="Retrosfer" class="mx-auto h-14 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/PzNm8DgG" alt="Pablo" title="Pablo" class="mx-auto h-14 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/8nYcK0xc" alt="Cacao Factory" title="Cacao Factory" class="mx-auto h-14 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/Q3TsVDMR" alt="Miracle" title="Miracle" class="mx-auto h-14 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/VWg4ndTg" alt="Nia" title="Nia" class="mx-auto h-14 object-contain 
+object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/xcTRkPD" alt="Miracle" title="Miracle" class="mx-auto h-14 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://ibb.co/Dg9sjqL6" alt="Nia" title="Nia" class="mx-auto h-14 object-contain 
+grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                </div>
+            </div>
+        </section>
+
+        <!-- Customized Services CTA -->
+        <section class="animated-section bg-[#5a7872] py-20">
+          <div class="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row justify-between items-center text-white">
+            <h2 class="text-4xl md:text-5xl font-medium text-center md:text-left mb-6 md:mb-0" style="font-family: 'Figtree', sans-serif;">
+              Markanız İçin Özel Bir Çözüme mi İhtiyacınız Var?
+            </h2>
+            <a href="#contact" class="group relative inline-block text-base font-medium text-[#5a7872] bg-white rounded-full px-8 py-3 transition-all duration-300 hover:bg-gray-200 shrink-0">
+              Teklif Alın
+            </a>
+          </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="animated-section bg-gray-50/50 py-20 lg:py-32">
+            <div class="container mx-auto px-6 max-w-7xl text-center">
+                <p class="text-[#5a7872] font-medium mb-4">Blogumuz</p>
+                <h2 class="text-4xl md:text-5xl font-medium text-black mb-6" style="font-family: 'Figtree', sans-serif; text-wrap: balance;">İçgörüleri Keşfedin ve Bir Adım Önde Olun</h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto mb-16">Blogumuz, çok çeşitli konularda en iyi uygulamalarını paylaşan danışman ekibimizin görüşlerini içerir.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                    <a href="blog-1.html" class="group block transition-transform duration-300 hover:-translate-y-1">
+                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                            <img src="https://framerusercontent.com/images/qklsR65YylztpJZUzOpPagyXoI.jpg" alt="Stratejik planlamanın gücü" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute top-4 left-4 bg-[#5a7872] text-white text-xs font-semibold px-3 py-1 rounded-full">Ekim 8, 2025</div>
+                        </div>
+                        <h3 class="text-xl font-medium text-black group-hover:text-[#5a7872] transition-colors">Franchise Yatırımcıları İçin Stratejik Planlama: Başarıya Giden Yol Haritası</h3>
+                    </a>
+                    <a href="blog-2.html" class="group block transition-transform duration-300 hover:-translate-y-1">
+                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                            <img src="https://framerusercontent.com/images/vyet712c80Y4J9fhSnep20f2mlU.jpg" alt="İyi liderliğin önemi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute top-4 left-4 bg-[#5a7872] text-white text-xs font-semibold px-3 py-1 rounded-full">Eylül 15, 2025</div>
+                        </div>
+                        <h3 class="text-xl font-medium text-black group-hover:text-[#5a7872] transition-colors">Franchise Zincirlerinde Liderlik: Sürdürülebilir Büyümenin Anahtarı</h3>
+                    </a>
+                    <a href="blog-3.html" class="group block transition-transform duration-300 hover:-translate-y-1">
+                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                            <img src="https://framerusercontent.com/images/XOgTNGhNhIIdGFoazkqqnG9QmE.jpg" alt="İşinizi ölçeklendirme stratejileri" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute top-4 left-4 bg-[#5a7872] text-white text-xs font-semibold px-3 py-1 rounded-full">Ağustos 28, 2025</div>
+                        </div>
+                        <h3 class="text-xl font-medium text-black group-hover:text-[#5a7872] transition-colors">Doğru Franchise Modeliyle İşinizi Ölçeklendirin: Kârlı Büyüme Stratejileri</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="animated-section bg-white py-20 lg:py-32">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="text-center mb-16">
+                     <p class="text-[#5a7872] font-medium mb-4">İletişim</p>
+                    <h2 class="text-4xl md:text-5xl font-medium text-black" style="font-family: 'Figtree', sans-serif; text-wrap: balance;">Projenizi Birlikte Hayata Geçirelim</h2>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 gap-y-6">
+                            <div><label for="full-name" class="sr-only">Ad Soyad</label><input type="text" name="full-name" id="full-name" autocomplete="name" placeholder="Ad Soyad" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-[#5a7872] focus:border-[#5a7872] border-gray-300 rounded-md"></div>
+                            <div><label for="email" class="sr-only">E-posta</label><input id="email" name="email" type="email" autocomplete="email" placeholder="E-posta Adresiniz" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-[#5a7872] focus:border-[#5a7872] border-gray-300 rounded-md"></div>
+                            <div><label for="subject" class="sr-only">Konu</label><input type="text" name="subject" id="subject" placeholder="Konu" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-[#5a7872] focus:border-[#5a7872] border-gray-300 rounded-md"></div>
+                            <div><label for="message" class="sr-only">Mesajınız</label><textarea id="message" name="message" rows="4" placeholder="Mesajınız" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-[#5a7872] focus:border-[#5a7872] border-gray-300 rounded-md"></textarea></div>
+                            <div><button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-[#5a7872] hover:bg-[#4a6862] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a7872]">Mesajı Gönder</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a1a] text-white">
+        <div class="bg-[#5a7872]">
+            <div class="container mx-auto px-6 py-16 max-w-7xl flex flex-col md:flex-row justify-between items-center text-white">
+                <h2 class="text-3xl md:text-4xl font-medium text-center md:text-left mb-6 md:mb-0" style="font-family: 'Figtree', sans-serif; text-wrap: balance;">İşinizi dönüştürmeye hazır mısınız?</h2>
+                <a href="#contact" class="group relative inline-block text-base font-medium text-[#5a7872] bg-white rounded-full px-8 py-3 transition-all duration-300 hover:bg-gray-200 shrink-0">Ön Görüşme Talep Edin</a>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 py-16 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <img src="https://i.ibb.co/6g9g7dD/AGENA-LOGO-YEN.png" alt="Agena Danışmanlık Logosu" class="h-8 w-auto">
+                    <p class="text-sm text-gray-400">Yenilikçi çözümlerle sektör lideri danışmanlık firması.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M12 2.04c-5.5 0-10 4.49-10 10s4.5 10 10 10 10-4.49 10-10S17.5 2.04 12 2.04zm1.5 6.5h-2.1c-.28 0-.5.22-.5.5v1.6h2.6l-.35 2.5h-2.25v6.9H10V13.1H8V10.6h2V9.1c0-1.6 1-2.6 2.5-2.6h2v2.5z"></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M22.46 6c-.77.35-1.6.58-2.46.67.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.73-1.89-8.84-4.48-.37.63-.58 1.37-.58 2.15 0 1.49.76 2.81 1.91 3.58-.7-.02-1.37-.21-1.95-.54v.05c0 2.08 1.48 3.82 3.44 4.21-.36.1-.74.15-1.13.15-.28 0-.55-.03-.81-.08.55 1.7 2.14 2.94 4.03 2.97-1.47 1.15-3.32 1.82-5.33 1.82-.35 0-.69-.02-1.03-.06 1.9 1.22 4.16 1.92 6.58 1.92 7.89 0 12.21-6.54 12.21-12.21 0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.22z"></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Şirket</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Anasayfa</a></li>
+                        <li><a href="#referanslar" class="text-gray-400 hover:text-white">Hakkımızda</a></li>
+                        <li><a href="#hizmetler" class="text-gray-400 hover:text-white">Hizmetler</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Sayfalar</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#blog" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">İletişim</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">İletişim</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="mailto:info@agenadanismanlik.com" class="hover:text-white">info@agenadanismanlik.com</a></li>
+                        <li>Adalet Mah. Megapol Tower, Bayraklı / İzmir</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-700 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; <span id="current-year"></span> Agena Danışmanlık. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header Scroll ve Mobil Menü Script'i
+            const header = document.getElementById('page-header');
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOpenIcon = document.getElementById('menu-open-icon');
+            const menuCloseIcon = document.getElementById('menu-close-icon');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+            const toggleMenu = () => {
+                const isMenuOpen = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                menuOpenIcon.classList.toggle('hidden', !isMenuOpen);
+                menuCloseIcon.classList.toggle('hidden', isMenuOpen);
+                document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
+                updateHeaderBackground();
+            };
+
+            const updateHeaderBackground = () => {
+                const isMenuOpen = !mobileMenu.classList.contains('hidden');
+                if (window.scrollY > 10 || isMenuOpen) {
+                    header.classList.add('bg-black/50', 'backdrop-blur-lg');
+                } else {
+                    header.classList.remove('bg-black/50', 'backdrop-blur-lg');
+                }
+            };
+
+            window.addEventListener('scroll', updateHeaderBackground);
+            menuButton.addEventListener('click', toggleMenu);
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Footer'daki Yılı Güncelleme
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Animasyonlar için Intersection Observer
+            const animatedSections = document.querySelectorAll('.animated-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedSections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

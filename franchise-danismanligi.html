@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO için Sayfa Başlığı ve Açıklaması -->
+    <title>Franchise ve Satış Danışmanlığı | Agena Danışmanlık</title>
+    <meta name="description" content="Agena Danışmanlık ile markanız için doğru franchise modelini oluşturun, satış süreçlerinizi profesyonelce yönetin ve sürdürülebilir büyüme stratejinizi kurgulayın.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Figtree', sans-serif; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+            background-color: #f8f9fa;
+            color: #1a1a1a;
+        }
+        html { 
+            scroll-behavior: smooth; 
+        }
+        /* Header'ın sayfa başında transparan olmaması için */
+        #page-header {
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+        }
+        .prose h2, .prose h3 {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+        .prose ul > li::before {
+            background-color: #5a7872;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="page-header" class="fixed top-0 z-50 w-full transition-all duration-300">
+        <nav class="container mx-auto px-6 lg:px-8 py-4 grid grid-cols-3 items-center max-w-7xl">
+            <div class="flex justify-start">
+                <a href="index.html" aria-label="Ana Sayfa">
+                    <img src="https://i.ibb.co/6g9g7dD/AGENA-LOGO-YEN.png" alt="Agena Danışmanlık Logosu" class="h-8 w-auto">
+                </a>
+            </div>
+            <div class="hidden md:flex justify-center items-center space-x-8">
+                <a href="index.html#hizmetler" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Hizmetler</a>
+                <a href="index.html#surec" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Süreç</a>
+                <a href="index.html#referanslar" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Referanslar</a>
+                <a href="index.html#blog" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Blog</a>
+            </div>
+            <div class="flex justify-end items-center">
+                <div class="hidden md:flex">
+                   <a href="index.html#contact" class="text-sm font-medium text-white bg-transparent border border-gray-500 rounded-full px-5 py-2 hover:bg-white hover:text-black transition-all duration-300">Ön Görüşme</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-button" aria-label="Menüyü aç/kapat" class="text-white z-50 relative">
+                        <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                        <svg id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 hidden"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-black/90 backdrop-blur-lg transition-opacity duration-300">
+        <div class="flex flex-col items-center justify-center h-full pt-16">
+            <a href="index.html#hizmetler" class="mobile-menu-link py-4 text-2xl font-medium text-gray-200 hover:text-white transition-colors">Hizmetler</a>
+            <a href="index.html#surec" class="mobile-menu-link py-4 text-2xl font-medium text-gray-200 hover:text-white transition-colors">Süreç</a>
+            <a href="index.html#referanslar" class="mobile-menu-link py-4 text-2xl font-medium text-gray-200 hover:text-white transition-colors">Referanslar</a>
+            <a href="index.html#blog" class="mobile-menu-link py-4 text-2xl font-medium text-gray-200 hover:text-white transition-colors">Blog</a>
+            <a href="index.html#contact" class="mobile-menu-link mt-8 text-lg font-medium text-black bg-white rounded-full px-8 py-3 hover:bg-gray-200 transition-all duration-300">Ön Görüşme</a>
+        </div>
+    </div>
+    
+    <main>
+        <!-- Service Hero Section -->
+        <section class="relative pt-48 pb-32 w-full text-white bg-black">
+            <div class="absolute inset-0 bg-black/70 z-10"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop')"></div>
+            <div class="relative z-20 container mx-auto px-6 max-w-4xl text-center">
+                <p class="text-lg font-medium text-gray-300 mb-2">Hizmetlerimiz</p>
+                <h1 class="text-4xl md:text-6xl font-medium mb-4" style="font-family: 'Figtree', sans-serif; text-wrap: balance;">
+                    Franchise ve Satış Danışmanlığı
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                    Markanızın potansiyelini ortaya çıkararak, kârlı ve sürdürülebilir bir franchise ağı kurmanızı sağlıyoruz. Büyüme yolculuğunuzda stratejik ortağınız olalım.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Service Content Section -->
+        <section class="bg-white py-20 lg:py-24">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="prose lg:prose-lg max-w-none text-gray-700">
+                    <h2 class="text-3xl font-medium text-black">Markanızı Franchise ile Büyütmenin En Güvenli Yolu</h2>
+                    <p>Bir markayı büyütmenin en etkili yollarından biri olan franchising, doğru kurgulandığında hem marka sahibi hem de yatırımcı için büyük fırsatlar sunar. Ancak bu süreç, detaylı bir planlama, hukuki altyapı ve operasyonel mükemmellik gerektirir. Agena Danışmanlık olarak, 25 yılı aşkın tecrübemizle, markanızın franchise sistemini sıfırdan kurma, mevcut sistemi optimize etme ve satış süreçlerinizi yönetme konusunda size 360 derece destek sunuyoruz.</p>
+                    
+                    <h3 class="text-2xl font-medium text-black mt-12">Bu Hizmet Kimler İçin İdeal?</h3>
+                    <ul>
+                        <li>Kendi işini kurmuş ve markasını daha geniş kitlelere ulaştırmak isteyen işletme sahipleri.</li>
+                        <li>Büyüme potansiyeli yüksek olan ancak bunu nasıl yapacağını bilemeyen girişimciler.</li>
+                        <li>Mevcut franchise sisteminde verimlilik sorunları yaşayan ve profesyonel bir yapıya geçmek isteyen markalar.</li>
+                        <li>Yatırımcılardan talep alan ancak hukuki ve operasyonel altyapısı hazır olmayan şirketler.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Roadmap Section -->
+        <section class="bg-f8f9fa py-20 lg:py-24">
+            <div class="container mx-auto px-6 max-w-6xl text-center">
+                <h2 class="text-3xl md:text-4xl font-medium text-black mb-4">Franchise Yol Haritamız</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-16">Başarılı bir franchise ağının temellerini atmak için kanıtlanmış adımlarla ilerliyoruz:</p>
+                
+                <div class="relative">
+                    <!-- The connecting line -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-300 transform -translate-y-1/2"></div>
+                    
+                    <div class="relative flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0">
+                        <!-- Step 1 -->
+                        <div class="w-full md:w-1/5 text-center">
+                            <div class="relative">
+                                <div class="mx-auto w-16 h-16 bg-[#5a7872] text-white rounded-full flex items-center justify-center text-2xl font-bold z-10 relative">1</div>
+                            </div>
+                            <h4 class="text-lg font-medium mt-4">Analiz ve Strateji</h4>
+                            <p class="text-sm text-gray-600 mt-1">Markanız için en uygun franchise modelini ve yol haritasını belirleriz.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="w-full md:w-1/5 text-center">
+                            <div class="relative">
+                                <div class="mx-auto w-16 h-16 bg-[#5a7872] text-white rounded-full flex items-center justify-center text-2xl font-bold z-10 relative">2</div>
+                            </div>
+                            <h4 class="text-lg font-medium mt-4">Finansal ve Hukuki Altyapı</h4>
+                            <p class="text-sm text-gray-600 mt-1">Giriş bedeli, royalty oranları ve sözleşmeler gibi kritik altyapıyı oluştururuz.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="w-full md:w-1/5 text-center">
+                            <div class="relative">
+                                <div class="mx-auto w-16 h-16 bg-[#5a7872] text-white rounded-full flex items-center justify-center text-2xl font-bold z-10 relative">3</div>
+                            </div>
+                            <h4 class="text-lg font-medium mt-4">Operasyon Kılavuzları</h4>
+                            <p class="text-sm text-gray-600 mt-1">Marka standartlarınızın korunması için detaylı el kitapları hazırlarız.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="w-full md:w-1/5 text-center">
+                            <div class="relative">
+                                <div class="mx-auto w-16 h-16 bg-[#5a7872] text-white rounded-full flex items-center justify-center text-2xl font-bold z-10 relative">4</div>
+                            </div>
+                            <h4 class="text-lg font-medium mt-4">Satış ve Pazarlama</h4>
+                            <p class="text-sm text-gray-600 mt-1">Doğru yatırımcılara ulaşır ve satış süreçlerinizi profesyonelce yönetiriz.</p>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="w-full md:w-1/5 text-center">
+                            <div class="relative">
+                                <div class="mx-auto w-16 h-16 bg-[#5a7872] text-white rounded-full flex items-center justify-center text-2xl font-bold z-10 relative">5</div>
+                            </div>
+                            <h4 class="text-lg font-medium mt-4">Eğitim ve Denetim</h4>
+                            <p class="text-sm text-gray-600 mt-1">Açılış desteği, ekip eğitimleri ve periyodik denetimlerle başarıyı güvence altına alırız.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages Section -->
+        <section class="bg-white py-20 lg:py-24">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="prose lg:prose-lg max-w-none text-gray-700">
+                    <h2 class="text-3xl font-medium text-black text-center">Hizmetimizin Sağladığı Avantajlar</h2>
+                    <div class="mt-12 grid md:grid-cols-2 gap-8">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-medium text-[#5a7872]">Risk Minimizasyonu</h4>
+                            <p class="mt-2">Sektörel tecrübemiz sayesinde, franchise sürecinde karşılaşılabilecek hukuki, finansal ve operasyonel riskleri öngörerek sizi koruma altına alırız.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-medium text-[#5a7872]">Hızlı ve Sağlıklı Büyüme</h4>
+                            <p class="mt-2">Kanıtlanmış sistemimizle markanızın kontrolsüz değil, kârlı ve sürdürülebilir bir şekilde büyümesini sağlarız.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-medium text-[#5a7872]">Marka Değerinin Artışı</h4>
+                            <p class="mt-2">Profesyonel bir franchise yapısı, markanızın değerini ve pazardaki güvenilirliğini artırarak daha nitelikli yatırımcıları çeker.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-medium text-[#5a7872]">Zaman ve Kaynak Tasarrufu</h4>
+                            <p class="mt-2">Tüm karmaşık süreçleri sizin adınıza yöneterek, ana işinize odaklanmanız için size zaman ve kaynak kazandırırız.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 text-center">
+                        <h4 class="text-xl font-medium text-black">Stratejik Ortaklığa Hazır mısınız?</h4>
+                        <p class="mt-2 max-w-2xl mx-auto">Markanızın geleceğini şansa bırakmayın. Gelin, doğru stratejilerle markanızı birlikte büyütelim ve onu ulusal bir başarı hikayesine dönüştürelim.</p>
+                        <a href="index.html#contact" class="inline-block mt-4 text-base font-medium text-white bg-[#5a7872] px-6 py-3 rounded-full transition-all duration-300 hover:bg-[#4a6862]">
+                            Ücretsiz Ön Görüşme Talep Edin
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a1a] text-white">
+        <div class="bg-[#5a7872]">
+            <div class="container mx-auto px-6 py-16 max-w-7xl flex flex-col md:flex-row justify-between items-center text-white">
+                <h2 class="text-3xl md:text-4xl font-medium text-center md:text-left mb-6 md:mb-0" style="font-family: 'Figtree', sans-serif; text-wrap: balance;">İşinizi dönüştürmeye hazır mısınız?</h2>
+                <a href="index.html#contact" class="group relative inline-block text-base font-medium text-[#5a7872] bg-white rounded-full px-8 py-3 transition-all duration-300 hover:bg-gray-200 shrink-0">Ön Görüşme Talep Edin</a>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 py-16 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <img src="https://i.ibb.co/6g9g7dD/AGENA-LOGO-YEN.png" alt="Agena Danışmanlık Logosu" class="h-8 w-auto">
+                    <p class="text-sm text-gray-400">Yenilikçi çözümlerle sektör lideri danışmanlık firması.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Şirket</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Anasayfa</a></li>
+                        <li><a href="index.html#referanslar" class="text-gray-400 hover:text-white">Hakkımızda</a></li>
+                        <li><a href="index.html#hizmetler" class="text-gray-400 hover:text-white">Hizmetler</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Sayfalar</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#blog" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white">İletişim</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">İletişim</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="mailto:info@agenadanismanlik.com" class="hover:text-white">info@agenadanismanlik.com</a></li>
+                        <li>Adalet Mah. Megapol Tower, Bayraklı / İzmir</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-700 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; <span id="current-year"></span> Agena Danışmanlık. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobil Menü Script'i
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOpenIcon = document.getElementById('menu-open-icon');
+            const menuCloseIcon = document.getElementById('menu-close-icon');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+            const toggleMenu = () => {
+                const isMenuOpen = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                menuOpenIcon.classList.toggle('hidden', !isMenuOpen);
+                menuCloseIcon.classList.toggle('hidden', isMenuOpen);
+                document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
+            };
+
+            menuButton.addEventListener('click', toggleMenu);
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Footer'daki Yılı Güncelleme
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
+
